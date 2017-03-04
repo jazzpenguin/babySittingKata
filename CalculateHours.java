@@ -27,4 +27,13 @@ public class CalculateHours {
         long total = ChronoUnit.HOURS.between(formattedBedTime, midnight);
         return total;
     }
+
+    public long fromMidnightToDepartureTime() {
+        DepartureTime dt = new DepartureTime();
+        LocalDateTime midnight = LocalDateTime.of(0000, 01, 02, 00,00);
+
+        LocalDateTime departureTime = LocalDateTime.of(0000, 01, 02, 3, 00);
+        long total = ChronoUnit.HOURS.between(midnight, departureTime);
+        return total;
+    }
 }
