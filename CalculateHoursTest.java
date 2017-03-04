@@ -6,13 +6,23 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CalculateHoursTest {
 
+//    @Test
+//    void testCalculateHoursArrivalToBedTime() {
+//        CalculateHours ch = new CalculateHours();
+//
+//        ch.fromArrivalToBedTime();
+//
+//        assertEquals(ch.fromArrivalToBedTime(), 3);
+//
+//    }
+
     @Test
-    void testCalculateHours() {
+    void testCalculateHoursBedTimeToMidnight() {
         CalculateHours ch = new CalculateHours();
 
-        ch.fromArrivalToBedTime();
+        ch.fromBedTimeToMidnight();
 
-        assertEquals(ch.fromArrivalToBedTime(), 3);
+        assertEquals(ch.fromBedTimeToMidnight(), 4);
 
     }
 }
