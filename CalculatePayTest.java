@@ -11,7 +11,7 @@ class CalculatePayTest {
     void testCalculatePayArrivalToBedTime() {
         CalculatePay cp = new CalculatePay();
 
-        cp.calculatePayArrivalToBedTime();
+        cp.getCalculatePayArrivalToBedTime();
 
         assertEquals(cp.calculatePayArrivalToBedTime(), 36);
 
@@ -21,10 +21,19 @@ class CalculatePayTest {
     void testCalculatePayBedTimeToMidnight(){
         CalculatePay cp = new CalculatePay();
 
-        cp.calculatePayBedTimeToMidnight();
+        cp.getCalculatePayBedTimeToMidnight();
 
         assertEquals(cp.calculatePayBedTimeToMidnight(), 32);
 
+
+    }
+
+    @Test
+    void testCalculatePayMidnightToDepartureTime() {
+        CalculatePay cp = new CalculatePay();
+
+        cp.calculatePayMidnightToDepartureTime();
+        assertEquals(cp.calculatePayMidnightToDepartureTime(), 32);
 
     }
 }
