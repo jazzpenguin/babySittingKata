@@ -2,13 +2,24 @@ package com.example;
 
 
 public class CalculatePay {
-    public int calculatePayArrivalToBedTime() {
+
+    public long calculatePayArrivalToBedTime() {
+        CalculateHours ch = new CalculateHours();
 
         int arrivalToBedTimeHourly = 12;
-        int hoursWorked = 3;
 
-        int total = hoursWorked*arrivalToBedTimeHourly;
+        long total = ch.fromArrivalToBedTime()*arrivalToBedTimeHourly;
 
     return total;
+    }
+
+    public long calculatePayBedTimeToMidnight() {
+        CalculateHours ch = new CalculateHours();
+
+        int bedTimeToMidnightHourly = 8;
+
+        long total = bedTimeToMidnightHourly*ch.getFromBedTimeToMidnight();
+
+        return total;
     }
 }

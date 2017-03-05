@@ -19,6 +19,11 @@ class CalculatePayTest {
 
     @Test
     void testCalculatePayBedTimeToMidnight(){
+        CalculatePay cp = new CalculatePay();
+
+        cp.calculatePayBedTimeToMidnight();
+
+        assertEquals(cp.calculatePayBedTimeToMidnight(), 32);
 
 
     }
