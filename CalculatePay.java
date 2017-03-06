@@ -9,7 +9,11 @@ public class CalculatePay {
     public long getCalculatePayBedTimeToMidnight(){
         return calculatePayBedTimeToMidnight();
     }
-    long calculatePayArrivalToBedTime() {
+    public long getCalculatePayMidnightToDepartureTime(){
+        return calculatePayMidnightToDepartureTime();
+    }
+
+    private long calculatePayArrivalToBedTime() {
         CalculateHours ch = new CalculateHours();
 
         int arrivalToBedTimeHourly = 12;
@@ -19,7 +23,7 @@ public class CalculatePay {
     return total;
     }
 
-    long calculatePayBedTimeToMidnight() {
+    private long calculatePayBedTimeToMidnight() {
         CalculateHours ch = new CalculateHours();
 
         int bedTimeToMidnightHourly = 8;
@@ -29,7 +33,7 @@ public class CalculatePay {
         return total;
     }
 
-    public long calculatePayMidnightToDepartureTime() {
+    private long calculatePayMidnightToDepartureTime() {
         CalculatePay cp = new CalculatePay();
 
         int midnightToDepartureTimeHourly = 16;

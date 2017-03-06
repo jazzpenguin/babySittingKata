@@ -5,10 +5,21 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
 
-import static java.time.temporal.ChronoUnit.DAYS;
 
 public class CalculateHours {
-    public long fromArrivalToBedTime() {
+    public long getFromArrivalToBedTime(){
+        return fromArrivalToBedTime();
+    }
+
+    public long getFromBedTimeToMidnight(){
+        return fromBedTimeToMidnight();
+    }
+
+    public long getFromMidnightToDepartureTime(){
+        return fromMidnightToDepartureTime();
+    }
+
+    long fromArrivalToBedTime() {
         ArrivalTime ar = new ArrivalTime();
         BedTime bt = new BedTime();
         LocalTime arrival = ar.getBabySitterArrivalTime();
@@ -19,7 +30,7 @@ public class CalculateHours {
     return total;
     }
 
-    public long fromBedTimeToMidnight() {
+    private long fromBedTimeToMidnight() {
         BedTime bt = new BedTime();
         LocalDateTime midnight = LocalDateTime.of(0000, 01, 02, 00,00);
         LocalTime bedTime = bt.getKidsBedTime();
@@ -28,7 +39,7 @@ public class CalculateHours {
         return total;
     }
 
-    public long fromMidnightToDepartureTime() {
+    private long fromMidnightToDepartureTime() {
         DepartureTime dt = new DepartureTime();
         LocalDateTime midnight = LocalDateTime.of(0000, 01, 02, 00,00);
 
