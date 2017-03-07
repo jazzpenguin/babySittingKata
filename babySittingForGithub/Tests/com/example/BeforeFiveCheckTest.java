@@ -1,6 +1,7 @@
 package com.example;
-
 import org.junit.jupiter.api.Test;
+import java.text.ParseException;
+import java.time.LocalTime;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -8,10 +9,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class BeforeFiveCheckTest {
 
     @Test
-    void testBeforeFiveCheck() {
+    void testBeforeFiveCheck() throws ParseException {
         ArrivalTime ar = new ArrivalTime();
-        
-        assertEquals(ar.getBabySitterArrivalAtFive(), "17:00");
-        assertNotEquals(ar.getBabysitterArrivalBeforeFive(), "17:00");
+
+        ar.getArrivalTimeCheck();
+        assertEquals(ar.getBabySitterArrivalTime(), LocalTime.parse("17:00"));
+        assertNotEquals(ar.getBabySitterArrivalTime(), LocalTime.parse("17:00"));
     }
 }
