@@ -14,31 +14,31 @@ public class CalculatePay {
     }
 
     private long calculatePayArrivalToBedTime() {
-        CalculateHours ch = new CalculateHours();
-
+        CalculateHours calculateHours = new CalculateHours();
+        long arrivalToBedTimeHours = calculateHours.fromArrivalToBedTimeHours();
         int arrivalToBedTimeHourly = 12;
 
-        long total = ch.fromArrivalToBedTime()*arrivalToBedTimeHourly;
+        long total = arrivalToBedTimeHours*arrivalToBedTimeHourly;
 
     return total;
     }
 
     private long calculatePayBedTimeToMidnight() {
-        CalculateHours ch = new CalculateHours();
+        CalculateHours calculateHours = new CalculateHours();
 
         int bedTimeToMidnightHourly = 8;
 
-        long total = bedTimeToMidnightHourly*ch.getFromBedTimeToMidnight();
+        long total = bedTimeToMidnightHourly*calculateHours.fromBedTimeToMidnightHours();
 
         return total;
     }
 
     private long calculatePayMidnightToDepartureTime() {
-        CalculateHours ch = new CalculateHours();
+        CalculateHours calculateHours = new CalculateHours();
 
         int midnightToDepartureTimeHourly = 16;
 
-        long total =midnightToDepartureTimeHourly*ch.getFromMidnightToDepartureTime();
+        long total =midnightToDepartureTimeHourly*calculateHours.fromMidnightToDepartureTimeHours();
 
 
         return total;

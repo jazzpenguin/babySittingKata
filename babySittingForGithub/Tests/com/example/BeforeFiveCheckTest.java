@@ -12,8 +12,7 @@ class BeforeFiveCheckTest {
     void testBeforeFiveCheck() throws ParseException {
         ArrivalTime ar = new ArrivalTime();
 
-        ar.getArrivalTimeCheck();
-        assertEquals(ar.getBabySitterArrivalTime(), LocalTime.parse("17:00"));
-        assertNotEquals(ar.getBabySitterArrivalTime(), LocalTime.parse("17:00"));
+        assertNotEquals(ar.arrivalTimeCheck(), LocalTime.of(17, 01));
+        assertNotEquals(ar.arrivalTimeCheck(), LocalTime.of(16, 59));
     }
 }

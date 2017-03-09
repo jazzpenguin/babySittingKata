@@ -1,52 +1,44 @@
 package com.example;
 
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
 
 
 public class CalculateHours {
-    public long getFromArrivalToBedTime(){
-        return fromArrivalToBedTime();
-    }
 
-    public long getFromBedTimeToMidnight(){
-        return fromBedTimeToMidnight();
-    }
 
-    public long getFromMidnightToDepartureTime(){
-        return fromMidnightToDepartureTime();
-    }
-
-    long fromArrivalToBedTime() {
+    public long fromArrivalToBedTimeHours() {
         ArrivalTime ar = new ArrivalTime();
         BedTime bt = new BedTime();
         LocalTime arrival = ar.getBabySitterArrivalTime();
-        LocalTime bedTime = bt.getKidsBedTime();
+        LocalDateTime bedTime = bt.getKidsBedTime();
 
-        long total = ChronoUnit.HOURS.between(arrival, bedTime);
+        long totalArrivalToBedTime = ChronoUnit.HOURS.between(arrival, bedTime);
 
-    return total;
+        return totalArrivalToBedTime;
     }
 
-    private long fromBedTimeToMidnight() {
+    LocalDateTime midnight = LocalDateTime.of(2017, 01, 02, 00, 00);
+
+    public long fromBedTimeToMidnightHours() {
         BedTime bt = new BedTime();
-        LocalDateTime midnight = LocalDateTime.of(0000, 01, 02, 00,00);
-        LocalTime bedTime = bt.getKidsBedTime();
-        LocalTime formattedBedTime = bedTime;
-        long total = ChronoUnit.HOURS.between(formattedBedTime, midnight);
-        return total;
+        LocalDateTime bedTime = bt.getKidsBedTime();
+        LocalDateTime formattedBedTime = bedTime;
+        long totalBedTimeToMidnight = ChronoUnit.HOURS.between(formattedBedTime, midnight);
+        return totalBedTimeToMidnight;
     }
 
-    private long fromMidnightToDepartureTime() {
+    public long fromMidnightToDepartureTimeHours() {
         DepartureTime dt = new DepartureTime();
-            LocalDateTime midnight = LocalDateTime.of(0000, 01, 02, 00,00);
-            LocalTime departureTime = dt.getBabySitterDepartureTime();
-                if (departureTime.isAfter(LocalTime.of(04,00))){
-                    departureTime = LocalTime.of(04,00);
-}
-        long total = ChronoUnit.HOURS.between(midnight, departureTime);
-        return total;
+        LocalDateTime departureTime = dt.babySitterDepartureTime();
+        if (departureTime.isAfter(LocalDateTime.of(2017, 01, 02,04, 00))) {
+            departureTime = LocalDateTime.of(2017, 01, 02, 04, 00);
+
+        }
+        long totalMidnightToDeparture = ChronoUnit.HOURS.between(midnight, departureTime);
+        return totalMidnightToDeparture;
     }
 }

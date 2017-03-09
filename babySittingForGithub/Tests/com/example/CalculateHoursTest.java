@@ -10,9 +10,7 @@ class CalculateHoursTest {
     void testCalculateHoursArrivalToBedTime() {
         CalculateHours ch = new CalculateHours();
 
-        ch.getFromArrivalToBedTime();
-
-        assertEquals(ch.getFromArrivalToBedTime(), 3);
+        assertEquals(ch.fromArrivalToBedTimeHours(), 3);
 
     }
 
@@ -20,9 +18,7 @@ class CalculateHoursTest {
     void testCalculateHoursBedTimeToMidnight() {
         CalculateHours ch = new CalculateHours();
 
-        ch.getFromBedTimeToMidnight();
-
-        assertEquals(ch.getFromBedTimeToMidnight(), 4);
+        assertEquals(ch.fromBedTimeToMidnightHours(), 4);
 
     }
 
@@ -30,9 +26,7 @@ class CalculateHoursTest {
     void testCalculateMidnightToDepartureTime() {
         CalculateHours ch = new CalculateHours();
 
-        ch.getFromMidnightToDepartureTime();
-
-        assertEquals(ch.getFromMidnightToDepartureTime(), 3);
+        assertEquals(ch.fromMidnightToDepartureTimeHours(), 3);
 
     }
 }

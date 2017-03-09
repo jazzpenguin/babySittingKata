@@ -10,10 +10,8 @@ class LeaveNoLaterThanFourTest {
     @Test
     void testLeaveNoLaterThanFour() throws ParseException {
         DepartureTime lt = new DepartureTime();
-        lt.getBabySitterDepartureTime();
-        lt.getDepartureTimeCheck();
 
-        assertEquals(lt.getBabySitterDepartureTime(), LocalTime.parse("02:00"));
-        assertNotEquals(lt.getBabySitterDepartureTime(), LocalTime.of(04,00));
+        assertNotEquals(lt.departureTimeCheck(), LocalTime.of(03,59));
+        assertNotEquals(lt.departureTimeCheck(), LocalTime.of(04,01));
     }
 }
