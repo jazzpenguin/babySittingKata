@@ -1,0 +1,17 @@
+package com.example;
+import org.junit.jupiter.api.Test;
+import java.text.ParseException;
+import java.time.LocalTime;
+import static org.junit.jupiter.api.Assertions.*;
+
+
+
+class LeaveNoLaterThanFourTest {
+    @Test
+    void testLeaveNoLaterThanFour() throws ParseException {
+        DepartureTime dt = new DepartureTime();
+
+        assertNotEquals(dt.departureTimeCheck(dt.babySitterDepartureTime()), dt.beforeFour);
+
+    }
+}
