@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculateHoursTest {
+    // because the CalculateHours class uses ChronoUnit.HOURS, no fractional hours will be used in any calculations.
 
     @Test
     void testCalculateHoursArrivalToBedTime() {
