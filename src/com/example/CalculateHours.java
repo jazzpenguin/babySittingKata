@@ -24,6 +24,7 @@ public class CalculateHours {
     public long fromBedTimeToMidnightHours() {
         LocalDateTime bedTime = bt.getKidsBedTime();
         LocalDateTime formattedBedTime = bedTime;
+
         long totalBedTimeToMidnight = ChronoUnit.HOURS.between(formattedBedTime, midnight);
 
         return totalBedTimeToMidnight;

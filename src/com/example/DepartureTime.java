@@ -11,7 +11,6 @@ public class DepartureTime {
 
     String beforeFour = "Have a nice night!";
     String afterFour= "It is after 04:00, your pay stopped at 04:00.";
-
     LocalDateTime noLaterThanFourDeparture = LocalDateTime.of(2017, 01, 02,04,00);
 
     public LocalDateTime babySitterDepartureTime(){

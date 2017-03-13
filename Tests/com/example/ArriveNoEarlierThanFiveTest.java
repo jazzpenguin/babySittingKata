@@ -13,8 +13,6 @@ class ArriveNoEarlierThanFiveTest {
     void testArriveNoEarlierThanFive() throws ParseException {
         ArrivalTime ar = new ArrivalTime();
 
-
         assertEquals(ar.arrivalTimeCheck(ArrivalTime.getBabySitterArrivalTimeBeforeFive()), ArrivalTime.notClockedIn);
-
     }
 }

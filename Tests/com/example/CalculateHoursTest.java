@@ -11,7 +11,6 @@ class CalculateHoursTest {
         CalculateHours ch = new CalculateHours();
 
         assertEquals(ch.fromArrivalToBedTimeHours(), 3);
-
     }
 
     @Test
@@ -19,7 +18,6 @@ class CalculateHoursTest {
         CalculateHours ch = new CalculateHours();
 
         assertEquals(ch.fromBedTimeToMidnightHours(), 4);
-
     }
 
     @Test
@@ -27,6 +25,5 @@ class CalculateHoursTest {
         CalculateHours ch = new CalculateHours();
 
         assertEquals(ch.fromMidnightToDepartureTimeHours(), 3);
-
     }
 }

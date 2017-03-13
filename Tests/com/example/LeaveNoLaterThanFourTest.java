@@ -12,6 +12,5 @@ class LeaveNoLaterThanFourTest {
         DepartureTime dt = new DepartureTime();
 
         assertNotEquals(dt.departureTimeCheck(dt.babySitterDepartureTime()), dt.beforeFour);
-
     }
 }
