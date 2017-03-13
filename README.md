@@ -16,6 +16,7 @@ The babysitter gets paid in full hours(no fractional hours)
 Clone the repo in a .Zip file
 open .Zip and navigate through the SRC folder to the .Java files
 To open the tests, open the .Zip and navigate through the Tests folder
+open files in Intellij!
 
 # Tests
 Babysitter should arrive no earlier than 5:00 PM
